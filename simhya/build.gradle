@@ -1,0 +1,30 @@
+dependencies {
+    //compile fileTree(dir: 'lib', include: 'biopepa-core.jar')
+    compile fileTree(dir: 'lib', include: 'ssj-2.5.jar')
+    compile group: 'org.sbml.jsbml', name: 'jsbml', version: '1.2'
+    compile group: 'colt', name: 'colt', version: '1.2.0'
+    compile group: 'org.apache.commons', name: 'commons-math', version: '2.2'
+    compile group: 'org.apache.commons', name: 'commons-math3', version: '3.6.1'
+    compile group: 'org.jdesktop', name: 'appframework', version: '1.0.3'
+    compile group: 'com.github.yannrichet', name: 'JMathPlot', version: '1.0.1'
+    compile group: 'com.itextpdf', name: 'itextpdf', version: '5.5.12'
+    compile group: 'net.sf.squirrel-sql.thirdparty.non-maven', name: 'java-cup', version: '11a'
+    compile group: 'org.jfree', name: 'jfreechart', version: '1.0.19'
+    
+    compile project(':parsers')
+    compile project(':numeric')
+    compile project(':gpOptimisation')
+    compile project(':utils')
+    
+    testCompile project(':parsers')
+    testCompile project(':numeric')
+    testCompile project(':gpOptimisation')
+    testCompile project(':utils')
+}
+jar {
+    manifest.attributes(
+            // Class-Path won't contain "guava-15.0.jar"
+            'Class-Path': configurations.runtime.files.collect { it.name }.join(' '),
+            'Main-Class': 'com.eggloop.flow.simhya.simhya.Main'
+    )
+}

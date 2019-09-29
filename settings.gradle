@@ -1,0 +1,13 @@
+rootProject.name = 'com.eggloop'
+
+include 'gaussianProcesses'
+include 'gpOptimisation'
+include 'parsers'
+include 'utils'
+include 'sampler'
+include 'numeric'
+include 'simhya'
+include 'learning'
+include 'example'
+
+

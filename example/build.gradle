@@ -1,0 +1,8 @@
+dependencies {
+    compile project(':simhya')
+    compile project(':parsers')
+    compile project(':numeric')
+    compile project(':gpOptimisation')
+    compile project(':utils')
+    compile project(':learning')
+}

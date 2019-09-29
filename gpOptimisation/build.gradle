@@ -1,0 +1,4 @@
+dependencies {
+    compile project(':gaussianProcesses')
+    compile project(':sampler')
+}

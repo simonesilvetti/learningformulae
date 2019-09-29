@@ -1,0 +1,5 @@
+dependencies {
+    compile group: 'org.antlr', name: 'antlr-runtime', version: '3.5.2'
+    compile group: 'nz.ac.waikato.cms.weka.thirdparty', name: 'java-cup-11b-runtime', version: '2015.03.26'
+
+}
